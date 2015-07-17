@@ -1,0 +1,6 @@
+alter table `server_db`.`rad_provider_info` 
+   add column `PRACTICE_PATIENT_CAT` int(10) NULL
+    after `UPDATED_DATE`, 
+    Engine=InnoDB checksum=1 auto_increment=39 
+    comment='' delay_key_write=1 row_format=dynamic 
+    charset=utf8 collate=utf8_general_ci 

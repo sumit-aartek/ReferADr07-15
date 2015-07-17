@@ -1,0 +1,76 @@
+/**
+ * Housekeeping
+ */
+
+fieldset {
+  margin: 1em 0;
+  border: 0;
+  padding: 0;
+  position: relative;
+}
+input {
+  font-size: 1em;
+  font-family: sans-serif;
+  font-weight: 200;
+  border: 2px solid #999;
+  padding: .75em 1em;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+input:focus {
+  border-color: #0089ec;
+}
+a {
+  color: #0089ec;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.whitespace:before {
+  content: "...some content here...";
+  color: #ccc;
+  background: #f5f5f5;
+  margin: 1em 0;
+  padding: 5em 0;
+  font-weight: bold;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+.omer-time h3 {
+  text-align: left;
+  margin: 0;
+  font-size: 19px;
+  font-weight: normal;
+  color: #FAA638;
+}
+
+.omer-time fieldset {
+  margin: 0;
+}
+
+.omer-time input#input_from {
+  background: #fff;
+}
+
+.omer-time input#input_to {
+  background: #FFF;
+}
+
+.omer-time a {
+  text-align: center;
+  font-size: 13px;
+}
+

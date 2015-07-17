@@ -1,0 +1,436 @@
+div#header {
+background: #fff;
+margin-bottom: 20px;
+}
+
+div#contact-us h1 {
+text-align: right;
+color: #0e7cc0;
+font-size: 24px;
+padding: 42px 80px 42px 0;
+background: url(../img/contact-us-header.png) no-repeat;
+background-position: 100%;
+}
+
+div#main-navaigation {
+background: #0e7cc0;
+padding: 20px 0.9375rem;
+min-height:420px;
+}
+
+div#main-navaigation h1 {
+color: #faa638;
+font-weight: bold;
+font-size: 24px;
+}
+
+
+div#main-navaigation ul li {
+list-style: none;
+padding-left: 25px;
+background-position: 1%;
+}
+
+div#main-navaigation ul li a {
+display: block;
+color: #fff;
+text-transform: uppercase;
+font-size: 16px;
+}
+
+div#main-navaigation ul {
+margin: 0;
+}
+
+li.inbox{
+background: url(../img/inbox.png);
+background-repeat:no-repeat;
+}
+
+li.clearing-house{
+background: url(../img/house.png);
+background-repeat:no-repeat;
+}
+
+li.dashboard{
+background: url(../img/dashboard.png);
+background-repeat:no-repeat;
+}
+
+li.report{
+background: url(../img/reports.png);
+background-repeat:no-repeat;
+}
+
+li.settings{
+background: url(../img/Settings.png);
+background-repeat:no-repeat;
+}
+
+li.create-practice a {
+background: #fff;
+color: #faa638!important;
+text-align: center;
+}
+
+li.create-practice {
+padding: 8px!important;
+background: #fff;
+border-radius: 7px;
+margin-top: 25px;
+font-size: 22px!important;
+font-weight: bold;
+}
+
+div#secondary-menu ul {
+margin: 0;
+list-style: none;
+}
+
+div#secondary-menu li {
+float: left;
+margin: 10px;
+}
+
+div#secondary-menu ul li a {
+display: block;
+background: #0e7cc0;
+color: #fff;
+padding: 10px 0px;
+width: 152px;
+text-align: center;
+text-transform: uppercase;
+border-radius: 5px;
+border: 1px solid #0e7cc0;
+}
+
+div#secondary-menu ul li a:hover {
+background: #faa638;
+}
+
+div#secondary-menu {
+margin-bottom: 40px;
+}
+
+div#content-right-main h1 {
+text-transform: uppercase;
+font-size: 21px;
+padding-left: 31px;
+font-weight: bold;
+}
+
+div#user-roles {
+padding: 0 29px;
+}
+
+div#user-roles table {
+width: 100%;
+}
+
+div#add-administrator h1 {
+padding-left: 0;
+color: #e95747;
+text-transform: capitalize;
+font-size: 18px!important;
+}
+
+div#add-administrator {
+padding: 0 29px;
+}
+
+div#add-administrator form label {
+max-width: 300px;
+width: 100%;
+float: left;
+margin: 0 4px;
+}
+
+input.add-user {
+margin: 20px 10px;
+padding: 10px 30px;
+border: none;
+color: #000;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+div#administrators-form {
+max-width: 700px;
+float: left;
+}
+
+input {
+background: #0e7cc0;
+border: none;
+outline: 0;
+padding: 7px 25px;
+color: #fff;
+font-size: 18px;
+font-weight: bold;
+}
+
+.buttons-blue-container {
+float: right;
+padding-left: 0.9375rem;
+padding-right: 0.9375rem;
+}
+
+.practice-table tr.first-row-heading-table {
+background: #0e7cc0;
+}
+
+.practice-table tr.first-row-heading-table td {
+color: #fff;
+font-weight: bold;
+}
+
+.practice-table table {
+width: 100%;
+}
+
+div#practice-area-content h1 {
+padding: 0;
+margin: 0 0 30px;
+}
+
+input.right-button {
+float: right;
+}
+
+tr.first-row-heading-table {
+background: #0e7cc0;
+}
+
+tr.first-row-heading-table td {
+color: #fff;
+font-weight: bold;
+text-align:center;
+}
+
+div#add-a-practice table {
+width: 100%;
+}
+
+h1.red-heading {
+padding: 0!important;
+color: #e95747;
+}
+
+li.create-practice a {
+font-size: 16px!important;
+}
+
+::selection {
+background: #474545;
+color: #fff;
+}
+
+/******BY Umer***/
+
+div#form-main-container-of-fancybox {
+float: none;
+clear:both;
+}
+
+div#float {
+float: left;
+}
+
+h4.text-align-center {
+text-align: center;
+}
+
+h5.text-align-right {
+text-align: center;
+}
+
+h4.text-align {
+text-align: center;
+}
+
+div#attach-file {
+float: left;
+}
+
+div#padding-0 {
+padding: 0;
+}
+
+div#speciality-panel {
+float: left;
+width: 100%;
+}
+
+div#padding-right {
+padding-left: 0;
+}
+
+div#padding-left {
+padding-right: 0;
+}
+
+.image {
+width: 100%;
+margin-bottom: 20px;
+}
+
+div#scroll {
+max-height: 605px;
+overflow-x: hidden;
+overflow-y: scroll;
+}
+
+.small-12.medium-12.large-3.date {
+float: right;
+padding-right: 15px;
+}
+
+.float-right {
+float: right;
+}
+
+input.small.radius.button{
+float:right;
+}
+
+h1.practice {
+color: #FAA638;
+font-size: 15px !important;
+font-weight: bold !important;
+padding: 0 !important;
+}
+
+div#scroll-2 {
+max-height: 379px;
+overflow-x: hidden;
+overflow-y: scroll;
+}
+
+a.button-in-table {
+display: block;
+text-align: center;
+padding: 5px 20px;
+background: #0E7CC0;
+color: #fff;
+margin-bottom: 2px;
+}
+
+div#custom-table {
+width: 96%;
+margin: 0 auto;
+}
+
+p.speciality {
+text-align: center;
+font-size: 14px;
+}
+
+select#example-multiple-selected {
+min-height: 100px;
+}
+
+div#referNav a{
+background:url(../img/next.png)no-repeat!important;
+border:none!important;
+box-shadow:none!important;
+}
+
+.with-custom-designs ul {
+box-shadow: none!important;
+border-radius: 0!important;
+}
+
+div#referNav a.active{
+background:url(../img/down.png)no-repeat!important;
+border:none!important;
+box-shadow:none!important;
+}
+
+/**CUSTOM CSS BY SAQIB **/
+
+div#top-bar {
+  width: 100%;
+  float: left;
+  background: #EAEAEA;
+  padding: 20px 0;
+  margin-bottom:20px;
+}
+
+.top-nav ul {
+  text-align: right;
+  list-style: none;
+}
+
+.top-nav ul li {
+  display: inline-block;
+    color: #008CBA;
+}
+
+div#logo img {
+  display: block;
+  float: left;
+  max-width: 212px;
+}
+
+div#contact-us {
+  margin-top: 47px;
+    padding: 0 44px;
+}
+
+div#full-width {
+  width: 100%;
+  max-width: 93px;
+  padding: 0;
+  margin: 0;
+}
+
+div#full-width a {
+  padding: 12px 26px;
+}
+
+div#bottom-bar {
+  width: 100%;
+  padding: 20px 0;
+  background: #EAEAEA;
+margin-top:30px;
+}
+
+div#bottom-bar p {
+  margin: 0;
+  text-align: center;
+}
+p.ex {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 40px;
+}
+input#search{
+margin-bottom:10px;
+}
+
+ul.ui-front {
+  background: #fff!important;
+  max-width: 500px!important;
+  list-style: none;
+  max-height: 300px;
+  overflow-x: scroll;
+}
+
+ul.ui-front li {
+  padding: 5px;
+}
+#accordion ul li a{
+  font-size: 15px;
+}
+div#float{
+width:100%;
+}
+.row {
+    display: table;
+}
+
+.col {
+    display: table-cell;
+    width: 50%; /* depends on the number of columns */
+}
