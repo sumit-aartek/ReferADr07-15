@@ -70,7 +70,9 @@ public class doctorController {
 					return "redirect:/logout.do";  
 			 }
 		    /*return "doctor";*/
-			 return "doctorNew";
+			/* return "doctorNew";*/
+			 return "doctor7_15";
+			 
 		 }catch(Exception e)
 		 {
 				StringWriter errors = new StringWriter();

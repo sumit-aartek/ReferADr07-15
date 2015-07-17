@@ -1,87 +1,72 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html class="no-js" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Connecting Doctors</title>
-    <link rel="stylesheet" href="cssNEW/foundation.css" />
-    <link rel="stylesheet" href="cssNEW/style.css" />
-    <script src="jsNEW/modernizr.js"></script>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="responsiveNEW/style.css">
-	<link rel="stylesheet" type="text/css" href="responsiveNEW/responsive.css">
-	<link href="cssNEW/support.css" rel="stylesheet">
-	<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
-	
-	<!--Scripts and CSS for multiselect Dropdown only-->
-
-
-    	<!--Scripts and CSS for multiselect Dropdown only-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Refer A Doctor | Doctors</title>
+<link rel="stylesheet" href="css7_15/foundation.css" />
+<link rel="stylesheet" href="css7_15/style.css" />
+<link rel="stylesheet"
+	href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+<script src="js7_15/vendor/modernizr.js"></script>
 </head>
 <body>
-<div id="page-container" class="page">  
-            <tiles:insertAttribute name="header"></tiles:insertAttribute>
-         <div class="row">
-        <div id="site-content-area">
-    
-            <tiles:insertAttribute name="menu"></tiles:insertAttribute>
-            
-            <tiles:insertAttribute name="body"></tiles:insertAttribute>
-            
-         
-            </div>
-            </div>
-          </div>
-          
+	<div class="page-id-1 main-page" id="page-container">
+		<div id="inner-page-container" class="max-row">
+			<tiles:insertAttribute name="header"></tiles:insertAttribute>
+			<!--MAIN CONTENT BEGINS HERE-->
+			<div class="content-main-container">
+				<div class="main-content-inner-container">
+					<div class="row">
 
-	<script type="text/javascript" src="responsiveNEW/script.js"></script>
+						<tiles:insertAttribute name="menu"></tiles:insertAttribute>
+
+						<tiles:insertAttribute name="body"></tiles:insertAttribute>
 
 
+					</div>
+					<!--.row-->
+				</div>
+				<!--.main-content-inner-container-->
+			</div>
+			<!--.content-main-container-->
+			<!--MAIN CONTENT ENDS HERE-->
+		</div>
+		<!--#inner-page-container-->
+	</div>
+	<!--#page-container-->
 
+	<script src="js7_15/vendor/jquery.js"></script>
+	<script src="js7_15/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
 
-  <script src="jsNEW/bs.js"></script>
+	<!--SCRIPT FOR SIDE MENU BEGINS-->
+	<!-- prefix free to deal with vendor prefixes -->
+	<script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js"
+		type="text/javascript" type="text/javascript"></script>
 
-    
-    <script src="jsNEW/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script> 
-      
-      	<script type="text/javascript">
+	<!-- jQuery -->
+	<script src="js7_15/jquery.1.9.1.min.js"
+		type="text/javascript"></script>
+	<script>
+		/*jQuery time*/
+		$(document).ready(function() {
+			$("#accordian h3").click(function() {
+				//slide up all the link lists
+				$("#accordian ul ul").slideUp();
+				//slide down the link list below the h3 clicked - only if its closed
+				if (!$(this).next().is(":visible")) {
+					$(this).next().slideDown();
+				}
+			})
+		})
+	</script>
+	<!--SCRIPT FOR SIDE MENU ENDS-->
 
-function getCurrentLinkFrom(links){
-
-    var curPage = document.URL;
-    curPage = curPage.substr(curPage.lastIndexOf("/")) ;
-
-    links.each(function(){
-        var linkPage = $(this).attr("href");
-        linkPage = linkPage.substr(linkPage.lastIndexOf("/"));
-        if (curPage == linkPage){
-            return $(this);
-        }
-    });
-};
-
- /* $(document).ready(function(){
-    var currentLink = getCurrentLinkFrom($("navbar a"));
-    currentLink.addClass("current_link") ;
-}); */ 
-</script>
-<script>
-$(document).on('click', '.browse', function(){
-  var file = $(this).parent().parent().parent().find('.file');
-  file.trigger('click');
-});
-$(document).on('change', '.file', function(){
-  $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
-});
-</script>
-      
-          
 </body>
 </html>

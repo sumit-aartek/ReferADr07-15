@@ -4,370 +4,424 @@
        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 
 <tiles-definitions>
-    
-      <definition name="baseNew.definition" template="/WEB-INF/jsp/mainTemplateNew.jsp">
-        <put-attribute name="title" value=""></put-attribute>
-        <put-attribute name="header" value="/WEB-INF/jsp/headerNew.jsp"></put-attribute>
-        <put-attribute name="menu" value=""></put-attribute>
-        <put-attribute name="body" value=""></put-attribute>
-        <put-attribute name="footer" value=""></put-attribute>
-    </definition>
-    
-    <definition name="base.definition" template="/WEB-INF/jsp/mainTemplate.jsp">
-        <put-attribute name="title" value=""></put-attribute>
-        <put-attribute name="header" value="/WEB-INF/jsp/header.jsp"></put-attribute>
-        <put-attribute name="menu" value=""></put-attribute>
-        <put-attribute name="body" value=""></put-attribute>
-        <put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="base2.definition" template="/WEB-INF/jsp/loginTemplate.jsp">
-        <put-attribute name="title" value=""></put-attribute>
-        <put-attribute name="header" value="/WEB-INF/jsp/header.jsp"></put-attribute>
-        <put-attribute name="body" value=""></put-attribute>
-    </definition>
 
-    <definition name="base1.definition" template="/WEB-INF/jsp/firstScreen.jsp">
-        <put-attribute name="title" value=""></put-attribute>
-        <put-attribute name="header" value="/WEB-INF/jsp/header.jsp"></put-attribute>
-        <put-attribute name="body" value=""></put-attribute>
-        
-    </definition>
-    
-    <definition name="CHAdminRegister" extends="base2.definition">
-        <put-attribute name="title" value="Clearing House Administrator Registration Form"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/CHAdminRegister.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="Login" extends="base2.definition">
-        <put-attribute name="title" value="Login Page"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/Login.jsp"></put-attribute>
-    </definition>
-    
-        <definition name="exLogin" extends="base2.definition">
-        <put-attribute name="title" value="Login Page"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/exLogin.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="ChHome" extends="base.definition">
-        <put-attribute name="title" value="Clearing House Screen"></put-attribute>
-        <put-attribute name="menu" value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/ChHome.jsp"></put-attribute>
-    </definition>
-    
-     <definition name="chRefralReasons" extends="base.definition">
-        <put-attribute name="title" value="Clearing House Screen"></put-attribute>
-        <put-attribute name="menu" value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/chRefralReasons.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="chUpdate" extends="base.definition">
-        <put-attribute name="title" value="Clearing House Screen"></put-attribute>
-        <put-attribute name="menu" value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/chUpdate.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="ChAdmin" extends="base.definition">
-        <put-attribute name="title" value="Clearing House Screen"></put-attribute>
-        <put-attribute name="menu" value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/ChAdmin.jsp"></put-attribute>
-    </definition>
-    
-     <definition name="clearingHouseInbox" extends="base.definition">
-        <put-attribute name="title" value="Clearing House Screen"></put-attribute>
-        <put-attribute name="menu" value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/clearingHouseInbox.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="masterData" extends="base.definition">
-        <put-attribute name="title" value="Master Data Screen"></put-attribute>
-        <put-attribute name="menu" value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/masterData.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="firstScreen" id="firstScreen" extends="base.definition">
-        <put-attribute name="title" value="first Screen"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/firstScreen.jsp"></put-attribute>
-    </definition>
-      <definition name="referPatient" id="referPatient" extends="base.definition">
-        <put-attribute name="title" value="refer patient"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/referPatient.jsp"></put-attribute>
-    </definition>
-  <definition name="login" id="login" extends="base.definition">
-        <put-attribute name="title" value="login page"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/login.jsp"></put-attribute>
-    </definition>
-    <definition name="patientSearch" id="patientSearch" extends="base.definition">
-        <put-attribute name="title" value="login page"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/patientSearch.jsp"></put-attribute>
-    </definition>
-    
-     <definition name="practice" id="practice" extends="base.definition">
-        <put-attribute name="title" value="Practice page"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/practice.jsp"></put-attribute>
-    </definition>
-    
-       <definition name="practiceNew" id="practiceNew" extends="baseNew.definition">
-        <put-attribute name="title" value="Practice page"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/practiceNew.jsp"></put-attribute>
-    </definition>
-    
-       
-              <definition name="sendBox" id="sendBox" extends="baseNew.definition">
-        <put-attribute name="title" value="Send Box"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/sendBox.jsp"></put-attribute>
-    </definition>
-    
-         <definition name="LoginNew" extends="baseNew.definition">
-        <put-attribute name="title" value="Login Page"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/LoginNew.jsp"></put-attribute>
-    </definition>
-       
-       
-       
-       
-        <definition name="draftNew" id="draftNew" extends="baseNew.definition">
-        <put-attribute name="title" value="Practice Draft page"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/practiceDraftNew.jsp"></put-attribute>
-    </definition>
-    
-    
-     <definition name="labInbox" id="labInbox" extends="baseNew.definition">
-        <put-attribute name="title" value="lab Inbox"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_lab.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/labInbox.jsp"></put-attribute>
-    </definition>
-    
-    
-      <definition name="showSelectLabServices" id="showSelectLabServices" extends="baseNew.definition">
-        <put-attribute name="title" value="showSelect LabServices"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_lab.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/showSelectLabServices.jsp"></put-attribute>
-    </definition>
-    
-    
-        
-          <definition name="diagnosticNew" id="diagnostic" extends="baseNew.definition">
-        <put-attribute name="title" value="Practice diagnostic page"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/diagnosticNew.jsp"></put-attribute>
-    </definition>
-        
-    
-              <definition name="referPatientNew" id="referPatientNew" extends="baseNew.definition">
-        <put-attribute name="title" value="Refer A Patient"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/referPatientNew.jsp"></put-attribute>
-    </definition>
-       
-       
-      <definition name="draft" id="draft" extends="base.definition">
-        <put-attribute name="title" value="Practice Draft page"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/practiceDraft.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="patientName" id="patientName" extends="base.definition">
-        <put-attribute name="title" value="Patient Detail"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/patientName.jsp"></put-attribute>
-    </definition>
-    
-    
-    <definition name="patientNameNew" id="patientNameNew" extends="baseNew.definition">
-        <put-attribute name="title" value="Patient Detail"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/patientNameNew.jsp"></put-attribute>
-    </definition>
-    
-   
-    <definition name="shedule" id="shedule" extends="base.definition">
-        <put-attribute name="title" value="update refral"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/shedule.jsp"></put-attribute>
-    </definition>
-    
-    
-     <definition name="refralReasons" id="refralReasons" extends="base.definition">
-        <put-attribute name="title" value="Refral reasons"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/refralReasons.jsp"></put-attribute>
-    </definition>
-    
-    
-     <definition name="update" id="update" extends="base.definition">
-        <put-attribute name="title" value="update refral"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/update.jsp"></put-attribute>
-    </definition>
-    
-      <definition name="print" id="print" extends="base.definition">
-        <put-attribute name="title" value="Print"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/print.jsp"></put-attribute>
-    </definition>
-    
-      <definition name="doctor" id="doctor" extends="base.definition">
-        <put-attribute name="title" value="doctor"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/doctor.jsp"></put-attribute>
-    </definition>
-    
-      
-        <definition name="doctorNew" id="doctorNew" extends="baseNew.definition">
-        <put-attribute name="title" value="doctor"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/doctorNew.jsp"></put-attribute>
-    </definition>
-      
-      
-     
-     <definition name="editDoctor" id="editDoctor" extends="base.definition">
-        <put-attribute name="title" value="editDoctor"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/editDoctor.jsp"></put-attribute>
-    </definition>
-    
-     
-       <definition name="doctorTiming" id="doctorTiming" extends="base.definition">
-        <put-attribute name="title" value="Doctor's Availability"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/doctortimingMap.jsp"></put-attribute>
-    </definition>
-    
-              <definition name="doctorTimingNew" id="doctorTimingNew" extends="baseNew.definition">
-        <put-attribute name="title" value="Doctor's Availability"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/doctortimingMapNew.jsp"></put-attribute>
-    </definition>
-       
-       
-       
-       
-       <definition name="report" id="report" extends="base.definition">
-        <put-attribute name="title" value="Report"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/report.jsp"></put-attribute>
-    </definition>
-    
-       
-          <definition name="reportNew" id="reportNew" extends="baseNew.definition">
-        <put-attribute name="title" value="Report"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/reportNew.jsp"></put-attribute>
-    </definition>
-       
-       
-        <definition name="practiceInsurance" id="practiceInsurance" extends="base.definition">
-        <put-attribute name="title" value="practiceInsurance"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/practiceInsurance.jsp"></put-attribute>
-    </definition>
-     
-    
-     <definition name="ExceptionPage" extends="base.definition">
-        <put-attribute name="title" value="Exception Page"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/ExceptionPage.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="error" extends="base.definition">
-        <put-attribute name="title" value="Exception Page"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/error.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="CHAdmins" id="ChAdmins" extends="base.definition">
-        <put-attribute name="title" value="Clearing House Screen"></put-attribute>
-        <put-attribute name="menu" value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/CHAdmins.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="CHPractice" extends="base.definition">
-        <put-attribute name="title" value="Clearing House Screen"></put-attribute>
-        <put-attribute name="menu" value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/CHPractice.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="PracticeAdminRegister" extends="base2.definition">
-        <put-attribute name="title" value="Clearing House Screen"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/PracticeAdminRegister.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="clearingHouseInbox" extends="base.definition">
-        <put-attribute name="title" value="Clearing House Screen"></put-attribute>
-        <put-attribute name="menu" value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/clearingHouseInbox.jsp"></put-attribute>
-    </definition>
-    
-    <definition name="PracticeInfo" extends="base.definition">
-        <put-attribute name="title" value="Clearing House Screen"></put-attribute>
-        <put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/PracticeInfo.jsp"></put-attribute>
-    </definition>
-    
-        <definition name="patientCheckinform" extends="base2.definition">
-        <put-attribute name="title" value="Patient Checkin Form"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/patientCheckinform.jsp"></put-attribute>
-    </definition>
-    
-        
-        <definition name="ReferpatientByPhoneForm" extends="base2.definition">
-        <put-attribute name="title" value="Refer A Patient Form"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/referPatientBySmartPhone.jsp"></put-attribute>
-    </definition>
-        
-          <definition name="forgotpassword" extends="base2.definition">
-        <put-attribute name="title" value="Forgot Password"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/forgotpassword.jsp"></put-attribute>
-    </definition>
-    
-               <definition name="forgotpasswordNew" extends="baseNew.definition">
-        <put-attribute name="title" value="Forgot Password"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/forgotpasswordNew.jsp"></put-attribute>
-    </definition>
-          
-     <definition name="recoverPasswordNew" extends="baseNew.definition">
-        <put-attribute name="title" value="Recover Password"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/recoverPasswordNew.jsp"></put-attribute>
-    </definition>
-          
-          
-     <definition name="CHPracticeNew" extends="baseNew.definition">
-        <put-attribute name="title" value="Clearing House Screen"></put-attribute>
-        <put-attribute name="menu" value="/WEB-INF/jsp/menu_clearinghouseNew.jsp"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/CHPracticeNew.jsp"></put-attribute>
-    </definition>   
-    
-      <definition name="PracticeInfoNew" extends="baseNew.definition">
-        <put-attribute name="title" value="Our Practice"></put-attribute>
-        <put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/PracticeInfoNew.jsp"></put-attribute>
-    </definition>
-             
-                  <definition name="refralReasonsNew" id="refralReasonsNew" extends="baseNew.definition">
-        <put-attribute name="title" value="Refral reasons"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/refralReasonsNew.jsp"></put-attribute>
-    </definition>
-             
-                 <definition name="updateNew" id="updateNew" extends="baseNew.definition">
-        <put-attribute name="title" value="update refral"></put-attribute>
-         <put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
-       <put-attribute name="body" value="/WEB-INF/jsp/updateNew.jsp"></put-attribute>
-    </definition>      
-                  
-                  
-                  
-           <definition name="recoverPassword" extends="base2.definition">
-        <put-attribute name="title" value="Recover Password"></put-attribute>
-        <put-attribute name="body" value="/WEB-INF/jsp/recoverPassword.jsp"></put-attribute>
-    </definition>
-    
+	<definition name="baseNew.definition" template="/WEB-INF/jsp/mainTemplateNew.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/jsp/headerNew.jsp"></put-attribute>
+		<put-attribute name="menu" value=""></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value=""></put-attribute>
+	</definition>
+
+	<definition name="base7_15.definition" template="/WEB-INF/jsp7_15/mainTemplate.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/jsp7_15/header.jsp"></put-attribute>
+		<put-attribute name="menu" value=""></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value=""></put-attribute>
+	</definition>
+
+
+
+
+
+	<definition name="base.definition" template="/WEB-INF/jsp/mainTemplate.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/jsp/header.jsp"></put-attribute>
+		<put-attribute name="menu" value=""></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp"></put-attribute>
+	</definition>
+
+	<definition name="base2.definition" template="/WEB-INF/jsp/loginTemplate.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/jsp/header.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+	</definition>
+
+	<definition name="base1.definition" template="/WEB-INF/jsp/firstScreen.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/jsp/header.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+
+	</definition>
+
+	<definition name="CHAdminRegister" extends="base2.definition">
+		<put-attribute name="title"
+			value="Clearing House Administrator Registration Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/CHAdminRegister.jsp"></put-attribute>
+	</definition>
+
+	<definition name="Login" extends="base2.definition">
+		<put-attribute name="title" value="Login Page"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/Login.jsp"></put-attribute>
+	</definition>
+
+	<definition name="exLogin" extends="base2.definition">
+		<put-attribute name="title" value="Login Page"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/exLogin.jsp"></put-attribute>
+	</definition>
+
+	<definition name="ChHome" extends="base.definition">
+		<put-attribute name="title" value="Clearing House Screen"></put-attribute>
+		<put-attribute name="menu"
+			value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/ChHome.jsp"></put-attribute>
+	</definition>
+
+	<definition name="chRefralReasons" extends="base.definition">
+		<put-attribute name="title" value="Clearing House Screen"></put-attribute>
+		<put-attribute name="menu"
+			value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/chRefralReasons.jsp"></put-attribute>
+	</definition>
+
+	<definition name="chUpdate" extends="base.definition">
+		<put-attribute name="title" value="Clearing House Screen"></put-attribute>
+		<put-attribute name="menu"
+			value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/chUpdate.jsp"></put-attribute>
+	</definition>
+
+	<definition name="ChAdmin" extends="base.definition">
+		<put-attribute name="title" value="Clearing House Screen"></put-attribute>
+		<put-attribute name="menu"
+			value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/ChAdmin.jsp"></put-attribute>
+	</definition>
+
+	<definition name="clearingHouseInbox" extends="base.definition">
+		<put-attribute name="title" value="Clearing House Screen"></put-attribute>
+		<put-attribute name="menu"
+			value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/clearingHouseInbox.jsp"></put-attribute>
+	</definition>
+
+	<definition name="masterData" extends="base.definition">
+		<put-attribute name="title" value="Master Data Screen"></put-attribute>
+		<put-attribute name="menu"
+			value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/masterData.jsp"></put-attribute>
+	</definition>
+
+	<definition name="firstScreen" id="firstScreen" extends="base.definition">
+		<put-attribute name="title" value="first Screen"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/firstScreen.jsp"></put-attribute>
+	</definition>
+	<definition name="referPatient" id="referPatient" extends="base.definition">
+		<put-attribute name="title" value="refer patient"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/referPatient.jsp"></put-attribute>
+	</definition>
+	<definition name="login" id="login" extends="base.definition">
+		<put-attribute name="title" value="login page"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp"></put-attribute>
+	</definition>
+	<definition name="patientSearch" id="patientSearch" extends="base.definition">
+		<put-attribute name="title" value="login page"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/patientSearch.jsp"></put-attribute>
+	</definition>
+
+	<definition name="practice" id="practice" extends="base.definition">
+		<put-attribute name="title" value="Practice page"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/practice.jsp"></put-attribute>
+	</definition>
+
+	<definition name="practiceNew" id="practiceNew" extends="baseNew.definition">
+		<put-attribute name="title" value="Practice page"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/practiceNew.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="sendBox" id="sendBox" extends="baseNew.definition">
+		<put-attribute name="title" value="Send Box"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/sendBox.jsp"></put-attribute>
+	</definition>
+
+	<definition name="LoginNew" extends="baseNew.definition">
+		<put-attribute name="title" value="Login Page"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/LoginNew.jsp"></put-attribute>
+	</definition>
+
+
+
+
+	<definition name="draftNew" id="draftNew" extends="baseNew.definition">
+		<put-attribute name="title" value="Practice Draft page"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/practiceDraftNew.jsp"></put-attribute>
+	</definition>
+	
+		<definition name="draft7_15" id="draft7_15" extends="base7_15.definition">
+		<put-attribute name="title" value="Practice Draft page"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp7_15/leftMenu.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp7_15/draft.jsp"></put-attribute>
+	</definition>
+	
+	
+	
+
+
+	<definition name="labInbox" id="labInbox" extends="baseNew.definition">
+		<put-attribute name="title" value="lab Inbox"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_lab.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/labInbox.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="showSelectLabServices" id="showSelectLabServices"
+		extends="baseNew.definition">
+		<put-attribute name="title" value="showSelect LabServices"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_lab.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/showSelectLabServices.jsp"></put-attribute>
+	</definition>
+
+
+
+	<definition name="diagnosticNew" id="diagnostic" extends="baseNew.definition">
+		<put-attribute name="title" value="Practice diagnostic page"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/diagnosticNew.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="referPatientNew" id="referPatientNew"
+		extends="baseNew.definition">
+		<put-attribute name="title" value="Refer A Patient"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/referPatientNew.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="draft" id="draft" extends="base.definition">
+		<put-attribute name="title" value="Practice Draft page"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/practiceDraft.jsp"></put-attribute>
+	</definition>
+
+	<definition name="patientName" id="patientName" extends="base.definition">
+		<put-attribute name="title" value="Patient Detail"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/patientName.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="patientNameNew" id="patientNameNew"
+		extends="baseNew.definition">
+		<put-attribute name="title" value="Patient Detail"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/patientNameNew.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="shedule" id="shedule" extends="base.definition">
+		<put-attribute name="title" value="update refral"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/shedule.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="refralReasons" id="refralReasons" extends="base.definition">
+		<put-attribute name="title" value="Refral reasons"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/refralReasons.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="update" id="update" extends="base.definition">
+		<put-attribute name="title" value="update refral"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/update.jsp"></put-attribute>
+	</definition>
+
+	<definition name="print" id="print" extends="base.definition">
+		<put-attribute name="title" value="Print"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/print.jsp"></put-attribute>
+	</definition>
+
+	<definition name="doctor" id="doctor" extends="base.definition">
+		<put-attribute name="title" value="doctor"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/doctor.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="doctorNew" id="doctorNew" extends="baseNew.definition">
+		<put-attribute name="title" value="doctor"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/doctorNew.jsp"></put-attribute>
+	</definition>
+
+	<definition name="doctor7_15" id="doctor7_15" extends="base7_15.definition">
+		<put-attribute name="title" value="doctor"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp7_15/leftMenu.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp7_15/doctor.jsp"></put-attribute>
+	</definition>
+
+
+
+
+
+	<definition name="editDoctor" id="editDoctor" extends="base.definition">
+		<put-attribute name="title" value="editDoctor"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/editDoctor.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="doctorTiming" id="doctorTiming" extends="base.definition">
+		<put-attribute name="title" value="Doctor's Availability"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/doctortimingMap.jsp"></put-attribute>
+	</definition>
+
+	<definition name="doctorTimingNew" id="doctorTimingNew"
+		extends="baseNew.definition">
+		<put-attribute name="title" value="Doctor's Availability"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/doctortimingMapNew.jsp"></put-attribute>
+	</definition>
+
+
+
+
+	<definition name="report" id="report" extends="base.definition">
+		<put-attribute name="title" value="Report"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/report.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="reportNew" id="reportNew" extends="baseNew.definition">
+		<put-attribute name="title" value="Report"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/reportNew.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="practiceInsurance" id="practiceInsurance"
+		extends="base.definition">
+		<put-attribute name="title" value="practiceInsurance"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/practiceInsurance.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="ExceptionPage" extends="base.definition">
+		<put-attribute name="title" value="Exception Page"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/ExceptionPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="error" extends="base.definition">
+		<put-attribute name="title" value="Exception Page"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/error.jsp"></put-attribute>
+	</definition>
+
+	<definition name="CHAdmins" id="ChAdmins" extends="base.definition">
+		<put-attribute name="title" value="Clearing House Screen"></put-attribute>
+		<put-attribute name="menu"
+			value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/CHAdmins.jsp"></put-attribute>
+	</definition>
+
+	<definition name="CHPractice" extends="base.definition">
+		<put-attribute name="title" value="Clearing House Screen"></put-attribute>
+		<put-attribute name="menu"
+			value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/CHPractice.jsp"></put-attribute>
+	</definition>
+
+	<definition name="PracticeAdminRegister" extends="base2.definition">
+		<put-attribute name="title" value="Clearing House Screen"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/PracticeAdminRegister.jsp"></put-attribute>
+	</definition>
+
+	<definition name="clearingHouseInbox" extends="base.definition">
+		<put-attribute name="title" value="Clearing House Screen"></put-attribute>
+		<put-attribute name="menu"
+			value="/WEB-INF/jsp/menu_clearinghouse.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/clearingHouseInbox.jsp"></put-attribute>
+	</definition>
+
+	<definition name="PracticeInfo" extends="base.definition">
+		<put-attribute name="title" value="Clearing House Screen"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/PracticeInfo.jsp"></put-attribute>
+	</definition>
+
+	<definition name="patientCheckinform" extends="base2.definition">
+		<put-attribute name="title" value="Patient Checkin Form"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/patientCheckinform.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="ReferpatientByPhoneForm" extends="base2.definition">
+		<put-attribute name="title" value="Refer A Patient Form"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/referPatientBySmartPhone.jsp"></put-attribute>
+	</definition>
+
+	<definition name="forgotpassword" extends="base2.definition">
+		<put-attribute name="title" value="Forgot Password"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/forgotpassword.jsp"></put-attribute>
+	</definition>
+
+	<definition name="forgotpasswordNew" extends="baseNew.definition">
+		<put-attribute name="title" value="Forgot Password"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/forgotpasswordNew.jsp"></put-attribute>
+	</definition>
+
+	<definition name="recoverPasswordNew" extends="baseNew.definition">
+		<put-attribute name="title" value="Recover Password"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/recoverPasswordNew.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="CHPracticeNew" extends="baseNew.definition">
+		<put-attribute name="title" value="Clearing House Screen"></put-attribute>
+		<put-attribute name="menu"
+			value="/WEB-INF/jsp/menu_clearinghouseNew.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/CHPracticeNew.jsp"></put-attribute>
+	</definition>
+
+	<definition name="PracticeInfoNew" extends="baseNew.definition">
+		<put-attribute name="title" value="Our Practice"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/PracticeInfoNew.jsp"></put-attribute>
+	</definition>
+
+	<definition name="refralReasonsNew" id="refralReasonsNew"
+		extends="baseNew.definition">
+		<put-attribute name="title" value="Refral reasons"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/refralReasonsNew.jsp"></put-attribute>
+	</definition>
+
+	<definition name="updateNew" id="updateNew" extends="baseNew.definition">
+		<put-attribute name="title" value="update refral"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/updateNew.jsp"></put-attribute>
+	</definition>
+
+
+
+	<definition name="recoverPassword" extends="base2.definition">
+		<put-attribute name="title" value="Recover Password"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/recoverPassword.jsp"></put-attribute>
+	</definition>
+
 </tiles-definitions>

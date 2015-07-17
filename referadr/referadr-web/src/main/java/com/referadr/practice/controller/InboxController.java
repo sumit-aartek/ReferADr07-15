@@ -203,7 +203,8 @@ public class InboxController {
 				session.setAttribute("referralInfoList", referralInfoList);
 				model.addAttribute("referralInfoList", referralInfoList);
 				referralInfoList = null;
-				return "draftNew";
+				/*return "draftNew";*/
+				return "draft7_15";
 			} 
 			else 
 			{
