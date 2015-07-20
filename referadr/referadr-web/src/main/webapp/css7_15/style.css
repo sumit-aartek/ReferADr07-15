@@ -139,11 +139,7 @@ div#pagination {
 }
 
 
-table tr:first-child td {
-  line-height: 31px;
-  padding: 4px 5px;
-  border-bottom: 1px solid #000;
-}
+
 
 div#pagination a {
   color: #7c7c7c;
@@ -243,3 +239,16 @@ padding-right:0!important;
   padding-top: 11px;
 }
 
+/* By aartek */
+table#testTable thead tr td,
+table tr:first-child td {
+  line-height: 31px;
+  padding: 4px 5px;
+  border-bottom: 1px solid #000;
+}
+
+table#testTable tbody tr:first-child td {
+	line-height: normal;
+	padding: 4px 5px;
+	border-bottom: none;
+}

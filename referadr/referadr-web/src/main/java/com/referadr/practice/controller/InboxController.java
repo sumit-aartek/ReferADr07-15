@@ -119,7 +119,8 @@ public class InboxController {
 				}
 				model.addAttribute("referralInfoList", referralInfoList);
 				referralInfoList = null;
-				return "practiceNew";
+				/*return "practiceNew";*/
+				return "practice7_15";
 			}
 			else
 			{
@@ -201,7 +202,7 @@ public class InboxController {
 				List<PateintInfoVO> referralInfoList = null;
 				referralInfoList = inboxService.getDraftValue(providerInfo.getPracticeInfo().getPracticeId());
 				session.setAttribute("referralInfoList", referralInfoList);
-				model.addAttribute("referralInfoList", referralInfoList);
+				model.addAttribute("referralInfoListModel", referralInfoList);
 				referralInfoList = null;
 				/*return "draftNew";*/
 				return "draft7_15";
@@ -786,12 +787,16 @@ public class InboxController {
 		}
 		if (login.getRoleId() == 2)
 		{
-			return "practiceNew";
+			/*return "practiceNew";*/
+			return "practice7_15";
 		}
 		else
 		{
 			return "clearingHouseInbox";
 		}
+		
+
+	
 	}
 
 	// redirect to report.jsp

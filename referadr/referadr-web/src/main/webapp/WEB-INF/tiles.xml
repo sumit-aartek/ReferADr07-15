@@ -115,6 +115,14 @@
 		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/jsp/referPatient.jsp"></put-attribute>
 	</definition>
+	
+	   <definition name="referPatient7_15" id="referPatient7_15" extends="base7_15.definition">
+        <put-attribute name="title" value="Practice Draft page"></put-attribute>
+        <put-attribute name="menu" value="/WEB-INF/jsp7_15/leftMenu.jsp"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/jsp7_15/referPatient.jsp"></put-attribute>
+    </definition>
+	
+	
 	<definition name="login" id="login" extends="base.definition">
 		<put-attribute name="title" value="login page"></put-attribute>
 		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
@@ -137,6 +145,14 @@
 		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/jsp/practiceNew.jsp"></put-attribute>
 	</definition>
+
+	<definition name="practice7_15" id="practice7_15" extends="base7_15.definition">
+		<put-attribute name="title" value="Practice page"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp7_15/leftMenu.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp7_15/practice.jsp"></put-attribute>
+	</definition>
+
+
 
 
 	<definition name="sendBox" id="sendBox" extends="baseNew.definition">

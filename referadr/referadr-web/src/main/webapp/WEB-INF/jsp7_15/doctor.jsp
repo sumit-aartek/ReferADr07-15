@@ -6,76 +6,37 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-
-<link rel="stylesheet" href="css7_15/foundation.css" />
-<link rel="stylesheet" href="css7_15/style.css" />
-	<script src="js7_15/jquery.1.9.1.min.js" type="text/javascript"></script>
-
+<script src="js7_15/jquery.1.9.1.min.js" type="text/javascript"></script>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Doctor</title>
-
+<script src="js7_15/jsp-js/pagination.js" type="text/javascript"></script>
 <script type='text/javascript'>//<![CDATA[ 
-
-  $(document).ready(function () {
-        // number of records per page
-        var pageSize = 8;
-        // reset current page counter on load
-        $("#hdnActivePage").val(1);
-        // calculate number of pages
-        var numberOfPages = $('table tr').length / pageSize;
-        numberOfPages = numberOfPages.toFixed();
-        // action on 'next' click
-        
-        $('.pagination a.go-ahead').click(function(){
-        	// show only the necessary rows based upon activePage and Pagesize
-            $("table#testTable tbody tr:nth-child(-n+" + (($("#hdnActivePage").val() * pageSize) + pageSize) + ")").show();
-            $("table#testTable tbody tr:nth-child(-n+" + $("#hdnActivePage").val() * pageSize + ")").hide();
-            var currentPage = Number($("#hdnActivePage").val());
-            // update activepage
-            $("#hdnActivePage").val(Number($("#hdnActivePage").val()) + 1);
-            // check if previous page button is necessary (not on first page)
-            if ($("#hdnActivePage").val() != "1") {
-                $("a.go-previous").show();
-                $("a.go-previous span").show();
+    
+            function selectaction(refid){
+                   var selection=document.getElementById('actionselect'+refid).value;
+                   
+                   
+                   if(selection=='_Select_'){
+                	   return false;
+                	   }
+                   if(selection=='Edit'){
+                	   window.location.href =document.getElementById('edit'+refid).href;
+                	   return false;
+                   }
+                   if(selection=='Timing'){
+                	   window.location.href = document.getElementById('timing'+refid).href;
+                	   return false;
+                   }
+                   
+                   
+                   
             }
-            // check if next page button is necessary (not on last page)
-            if ($("#hdnActivePage").val() == numberOfPages) {
-                $("a.go-ahead").hide();
-                $("a.go-ahead span").hide();
-            }
-        });
-        
-        $('.pagination a.go-previous').click(function(){
-        	var currentPage = Number($("#hdnActivePage").val());
-            $("#hdnActivePage").val(currentPage - 1);
-            // first hide all rows
-            $("table#testTable tbody tr").hide();
-            // and only turn on visibility on necessary rows
-            $("table#testTable tbody tr:nth-child(-n+" + ($("#hdnActivePage").val() * pageSize) + ")").show();
-            $("table#testTable tbody tr:nth-child(-n+" + (($("#hdnActivePage").val() * pageSize) - pageSize) + ")").hide();
-            // check if previous button is necessary (not on first page)
-            if ($("#hdnActivePage").val() == "1") {
-                $("a.go-previous").hide();
-                $("a.go-previous span").hide();
-            } 
-            // check if next button is necessary (not on last page)
-            if ($("#hdnActivePage").val() < numberOfPages) {
-                $("a.go-ahead").show();
-                $("a.go-ahead span").show();
-            } 
-            if ($("#hdnActivePage").val() == 1) {
-                $(".pagination span").hide();
-            }
-        });
-        
-
-    });    
-
-
+                                              
+   
 </script>
 
 
@@ -91,8 +52,10 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+  
 
 </script>
+
 
 
 
@@ -173,25 +136,38 @@
 				<div class="doctors-table">
 					<div class="small-12 medium-12 large-12 columns no-padding">
 						<table id="testTable" width="100%" cellpadding="0" cellspacing="0">
+						<thead>
 							<tr>
 								<td>Name</td>
 								<td>Email ID</td>
 								<td>Role</td>
 								<td>Action</td>
 							</tr>
+							</thead>
+							<tbody>
+							<c:set var="count" value="0" scope="page" />
 							<c:forEach items="${ProviderInfoList}" var="provInfo">
+							    <c:set var="count" value="${count+1}" scope="page" />
 								<tr>
 									<td>${provInfo.providerFirstName}</td>
 									<td>${provInfo.providerEmail}</td>
 									<td>${provInfo.radCodes.codeDesc}</td>
 									<td>
-											<a href="editDoctor.do?provId=${provInfo.providerId}">Edit</a>
-											<!-- <a href="#">Edit</a>  -->
-											<br> <a
-												href="doctorTiming.do?provId=${provInfo.providerId}">Timing</a>
+									<a id="edit${count}" href="editDoctor.do?provId=${provInfo.providerId}"></a>
+									<!-- <a href="#">Edit</a>  -->
+									<br> <a id="timing${count}" href="doctorTiming.do?provId=${provInfo.providerId}"></a>
+												
+									<select id="actionselect${count}"  onchange="return selectaction(${count})">
+
+			                           <option>Select</option>
+		                               <option>Edit</option>
+			                           <option>Timing</option>
+			                        </select>
+												
 									</td>
 								</tr>
 							</c:forEach>
+							</tbody>
 						</table>
 
 					</div>
