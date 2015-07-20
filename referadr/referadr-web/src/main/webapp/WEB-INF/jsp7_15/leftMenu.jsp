@@ -33,7 +33,7 @@
 				<ul>
 					<li><a href="PracticeInfo.do">Practice Info</a></li>
 					<li class="list-menu-active"><a href="doctor.do">Doctors</a></li>
-					<li><a href="#">Insurance</a></li>
+					<li><a href="practiceInsurance.do">Insurance</a></li>
 					<li><a href="#">Our Network</a></li>
 				</ul>
 			</li>
