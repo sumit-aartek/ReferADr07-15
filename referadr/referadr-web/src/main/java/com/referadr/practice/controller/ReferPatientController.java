@@ -130,7 +130,8 @@ public class ReferPatientController {
 		return "redirect:/logout.do"; 
    }
 //	    return "referPatient";
-	   return "referPatientNew";
+//	   return "referPatientNew";
+	   return "referPatient7_15";
    }
    catch (Exception e)
    {

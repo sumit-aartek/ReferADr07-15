@@ -13,7 +13,7 @@ $(document)
 						numberOfPages = numberOfPages.toFixed();
 						// action on 'next' click
 						
-						 if (numberOfPages == 1) {
+						 if (numberOfPages == 1 || numberOfPages == 0) {
         	  $("a.go-ahead").hide();
               $("a.go-ahead span").hide();
         }

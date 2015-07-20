@@ -7,11 +7,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Refer A Doctor | Doctors</title>
+	<!-- jQuery -->
+<script src="js7_15/jquery.1.9.1.min.js" type="text/javascript"></script>
 <link rel="stylesheet" href="css7_15/foundation.css" />
 <link rel="stylesheet" href="css7_15/style.css" />
 <link rel="stylesheet"
 	href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
 <script src="js7_15/vendor/modernizr.js"></script>
+
 </head>
 <body>
 	<div class="page-id-1 main-page" id="page-container">
@@ -39,7 +42,7 @@
 	</div>
 	<!--#page-container-->
 
-	<script src="js7_15/vendor/jquery.js"></script>
+
 	<script src="js7_15/foundation.min.js"></script>
 	<script>
 		$(document).foundation();
@@ -50,9 +53,7 @@
 	<script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js"
 		type="text/javascript" type="text/javascript"></script>
 
-	<!-- jQuery -->
-	<script src="js7_15/jquery.1.9.1.min.js"
-		type="text/javascript"></script>
+
 	<script>
 		/*jQuery time*/
 		$(document).ready(function() {

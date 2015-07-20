@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<script src="js7_15/jquery.1.9.1.min.js" type="text/javascript"></script>
+
 <script src="js7_15/jsp-js/pagination.js" type="text/javascript"></script>
 <script type="text/javascript">
      function selectaction(refid,providerId,add){

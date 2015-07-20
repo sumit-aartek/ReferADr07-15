@@ -150,7 +150,7 @@ public class ReferPatientServiceImpl implements ReferPatientService {
     patientReferralInfo.getPatientInfo().getPatientInsuranceInfoList().get(0).setPatientPreAuthEndDate(((DateUtil.convertStringToDate(patientReferralInfo.getPatientInfo().getPatientInsuranceInfoList().get(0).getEndDate()))));
     try
     {
-       SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+       SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMMM d, yyyy");
        Date tempDate=simpleDateFormat.parse( patientReferralInfo.getPatientInfo().getPatientDob());
        SimpleDateFormat outputDateFormat = new SimpleDateFormat("yyyy/MM/dd");           
        System.out.println("Output date is = "+outputDateFormat.format(tempDate));
