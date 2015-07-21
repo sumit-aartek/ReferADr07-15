@@ -160,6 +160,12 @@
 		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/jsp/sendBox.jsp"></put-attribute>
 	</definition>
+	
+		<definition name="sendBox7_15" id="sendBox7_15" extends="base7_15.definition">
+		<put-attribute name="title" value="Send Box"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp7_15/leftMenu.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp7_15/sendBox.jsp"></put-attribute>
+	</definition>
 
 	<definition name="LoginNew" extends="baseNew.definition">
 		<put-attribute name="title" value="Login Page"></put-attribute>
@@ -419,6 +425,14 @@
 		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/jsp/PracticeInfoNew.jsp"></put-attribute>
 	</definition>
+	
+		<definition name="PracticeInfo7_15" id="PracticeInfo7_15" extends="base7_15.definition">
+		<put-attribute name="title" value="Our Practice"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp7_15/leftMenu.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp7_15/PracticeInfo.jsp"></put-attribute>
+	</definition>
+	
+	
 
 	<definition name="refralReasonsNew" id="refralReasonsNew"
 		extends="baseNew.definition">

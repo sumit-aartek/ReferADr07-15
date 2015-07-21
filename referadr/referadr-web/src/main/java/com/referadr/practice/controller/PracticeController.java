@@ -159,7 +159,8 @@ public class PracticeController {
 			return "redirect:/logout.do";
 		}
 		/*return "PracticeInfo";*/
-		return "PracticeInfoNew";
+		/*return "PracticeInfoNew";*/
+		return "PracticeInfo7_15";
 	}
 	@RequestMapping(value = "/updatePracticeInfo", method = RequestMethod.POST) 
 	public String updatePracticeInfo(@ModelAttribute("practiceInfo")PracticeInfo practiceInfo,HttpServletRequest request,Model model)
@@ -179,6 +180,8 @@ public class PracticeController {
 			throw new ReferadrException("Failed updating practice information");
 		}
 		/*return "PracticeInfo";*/
-		return "PracticeInfoNew";
+		/*return "PracticeInfoNew";*/
+		return "PracticeInfo7_15";
+		
 	}	
 }
