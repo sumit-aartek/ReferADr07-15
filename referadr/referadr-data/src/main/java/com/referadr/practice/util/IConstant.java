@@ -9,6 +9,8 @@ public interface IConstant {
 	static final String FILE_REF_PROV_ACTION= "PATIENT_REFERRAL_PROVIDER";
 	static final String FILE_PROVIDER_INFO="PRACTICE_INFO";
 	static final String SITE_URL="https://s3.amazonaws.com/referadr/";
+	static final String ACCESS_KEY_ID="AKIAIFGP4FMQUL76N5NA";
+	static final String SECRET_ACCESS_KEY="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";
 	//static final String PASSWORD_RECOVERY_URL="http://localhost:8080/referadr-web/recoverPassword.do";
 	static final String PASSWORD_RECOVERY_URL="http://referadrqa-env.elasticbeanstalk.com/recoverPassword.do";
 	//RAD_CODES related to DOCUMENT ATTACHMENTS
@@ -23,14 +25,15 @@ public interface IConstant {
 	static final String DATE_FORMAT_FILE= "yyyyMMddHHmmss";
 	
 	//its for QA
-	static final String FROM_MAIL= " freekwent@mkonnekt.com";
-	static final String TO_MAIL= " freekwent@mkonnekt.com";
+//	static final String FROM_MAIL= " freekwent@mkonnekt.com";
+//	static final String TO_MAIL= " freekwent@mkonnekt.com";
 	
 	//Its for production
 //	static final String FROM_MAIL= "referadr@mkonnekt.com";
 //	static final String TO_MAIL= "referadr@mkonnekt.com";
 	
-
+	static final String FROM_MAIL= " vipulrajchauhan@gmail.com";
+	static final String TO_MAIL= " vipulrajchauhan@gmail.com";
 	
 
 }

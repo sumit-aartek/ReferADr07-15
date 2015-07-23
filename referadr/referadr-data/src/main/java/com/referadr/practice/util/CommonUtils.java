@@ -197,7 +197,7 @@ public static int getLatestRefCHActionIdByRefId(int refId) {
 
 
 public static void uploadAttachments(ArrayList<FileMeta> fileList, int patientId, int referralId, int refProvOrCHActnId, boolean isProviderActn,int insinfoid) {
-	BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIAJTMFOQQTO6NVQVUA", "nZip7jHdQgBWQIajn+Bwi6zvDMGR9nkPik+xcbK0");
+	BasicAWSCredentials awsCreds = new BasicAWSCredentials(IConstant.ACCESS_KEY_ID, IConstant.SECRET_ACCESS_KEY);
 	AmazonS3 s3client = new AmazonS3Client(awsCreds);
 	try {
 		System.out.println("In Utils");
@@ -242,7 +242,7 @@ public static void uploadAttachments(ArrayList<FileMeta> fileList, int patientId
 
 
 	public static void uploadAttachments(ArrayList<FileMeta> fileList, int patientId, int referralId, int refProvOrCHActnId, boolean isProviderActn) {
-		BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIAJTMFOQQTO6NVQVUA", "nZip7jHdQgBWQIajn+Bwi6zvDMGR9nkPik+xcbK0");
+		BasicAWSCredentials awsCreds = new BasicAWSCredentials(IConstant.ACCESS_KEY_ID, IConstant.SECRET_ACCESS_KEY);
 		AmazonS3 s3client = new AmazonS3Client(awsCreds);
 		try {
 			System.out.println("In Utils");
@@ -285,7 +285,7 @@ public static void uploadAttachments(ArrayList<FileMeta> fileList, int patientId
 		}
 	}
 	public static void uploadAttachments(ArrayList<FileMeta> fileList, int providerID, boolean isProviderActn) {
-		BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIAJTMFOQQTO6NVQVUA", "nZip7jHdQgBWQIajn+Bwi6zvDMGR9nkPik+xcbK0");
+		BasicAWSCredentials awsCreds = new BasicAWSCredentials(IConstant.ACCESS_KEY_ID, IConstant.SECRET_ACCESS_KEY);
 		AmazonS3 s3client = new AmazonS3Client(awsCreds);
 		ArrayList<Document> docList = new ArrayList<Document>();
 		try {
