@@ -11,8 +11,8 @@
 <script src="js7_15/jquery.1.9.1.min.js" type="text/javascript"></script>
 <link rel="stylesheet" href="css7_15/foundation.css" />
 <link rel="stylesheet" href="css7_15/style.css" />
-<link rel="stylesheet"
-	href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" href="css7_15/support.css" />
+<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
 <script src="js7_15/vendor/modernizr.js"></script>
 
 </head>

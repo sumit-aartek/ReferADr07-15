@@ -157,7 +157,8 @@ public class InboxController {
 				referralInfoList = inboxService.getSendboxValue(providePracticeId);
 				model.addAttribute("referralInfoList", referralInfoList);
 				referralInfoList = null;
-				return "sendBox";
+				/*return "sendBox";*/
+				return "sendBox7_15";
 			}
 			else
 			{
@@ -717,7 +718,8 @@ public class InboxController {
 	@RequestMapping(value = "/download", method = RequestMethod.GET)
 	public void doDownload(HttpServletRequest request,HttpServletResponse response,@RequestParam("filePath") String filePath,@RequestParam("fileName") String fileName) throws IOException 
 	{
-		BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIAJTMFOQQTO6NVQVUA","nZip7jHdQgBWQIajn+Bwi6zvDMGR9nkPik+xcbK0");
+/*		BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIAJTMFOQQTO6NVQVUA","nZip7jHdQgBWQIajn+Bwi6zvDMGR9nkPik+xcbK0");*/
+		BasicAWSCredentials awsCreds = new BasicAWSCredentials(IConstant.ACCESS_KEY_ID,IConstant.SECRET_ACCESS_KEY);
 		AmazonS3 s3client = new AmazonS3Client(awsCreds);
 		S3Object object = s3client.getObject(new GetObjectRequest("referadr",filePath));
 		File downloadFile = new File(fileName);
@@ -879,7 +881,7 @@ public class InboxController {
 		return searchList;
 	}
 
-	@RequestMapping(value = "/getUpdatesNotifications", method = RequestMethod.GET)
+/*	@RequestMapping(value = "/getUpdatesNotifications", method = RequestMethod.GET)
 	@ResponseBody
 	public Map<String, List> getUpdatesNotifications(@RequestParam String userName, String lastDateTime) 
 	{
@@ -904,7 +906,7 @@ public class InboxController {
 		notificationlistmap.put("lastDateTimelist", lastDateTimelist);
 		notificationlistmap.put("notificationList", list);
 		return notificationlistmap;
-	}
+	}*/
 
 	/*
 	 * to Show Diagnostic *

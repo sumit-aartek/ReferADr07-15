@@ -8,6 +8,72 @@
 <title>Insert title here</title>
 
 <script src="js7_15/jsp-js/pagination.js" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/>
+
+
+    	 <script type="text/javascript">
+window.onload = function () {
+  var schedulefull = document.getElementById("all");
+	schedulefull.style.display = "none";
+  };
+</script>
+
+
+         <script type="text/javascript">
+
+        function setProviderId(){
+        	document.getElementById("sheduleWithProviderId").value=document.getElementById("extraproviderlist").value;
+            }
+
+
+
+         
+function saveShedule()
+{
+	var dateTime=document.getElementById("datetimepicker").value;
+var refId=document.getElementById("sheduleReferralId").value;
+var provId=document.getElementById("sheduleProviderId").value;
+var withProvId=document.getElementById("sheduleWithProviderId").value;
+var notes=document.getElementById("sheduleNotes").value;
+
+//alert(dateTime+"  "+refId+"  "+provId+"  "+notes);
+
+if(withProvId==""||withProvId==null||withProvId==0||withProvId=="undefined"){
+	var schedulefull = document.getElementById("all");
+	schedulefull.style.display = "block";
+	return false;	
+}
+else{
+	var schedulefull = document.getElementById("all");
+	schedulefull.style.display = "none";
+
+$.ajax({
+	url : "sheduleAction.do?dateTime="
+			+ encodeURIComponent(dateTime)
+			+ '&refId='
+			+ encodeURIComponent(refId)
+			+ '&provId=' + encodeURIComponent(provId)
+			+ '&withProvId=' + encodeURIComponent(withProvId)
+			+ '&notes=' + encodeURIComponent(notes),
+	type : "GET",
+	contentType : "application/json; charset=utf-8",
+	success : function(t) {
+	//alert("Scheduled");
+	var schedulefull = document.getElementById("shaduleModal");
+	schedulefull.style.display = "none";
+	window.location.href = document.getElementById('callpractice').href;
+	},
+	error : function() {
+		//alert("error");	
+	}
+})
+}
+return true;
+	}
+     </script>
+
+
 <script type="text/javascript">
      function selectaction(refid,providerId,add){
     var selection=	 document.getElementById('actionselect'+refid+''+add+'').value;
@@ -194,7 +260,7 @@ return false;
 												<option>Refer</option>
 												<option>Update</option>
 												 <option>Print</option> 
-												<!-- <option>Schedule</option> -->
+												 <option>Schedule</option>
 										</select>
 
 											<div class="modal fade" id="shaduleModal" tabindex="-1"
@@ -282,4 +348,23 @@ return false;
 
 
 </body>
+<script src="js/page-js/jquery.datetimepicker.js"></script>
+
+<script>
+ jQuery('#datetimepicker').datetimepicker({
+	 datepicker:true,
+	 format:'Y-m-d H:i',
+	 allowTimes:[
+	  '10:00', '10:30',
+	  '11:00', '11:30',  
+	  '12:00', '12:30',
+	  '13:00', '13:30',
+	  '14:00', '14:30',  
+	  '15:00', '15:30',
+	  '16:00', '16:30',
+	  '17:00', '17:30', '18:00'  
+	
+	 ]
+	});
+</script>
 </html>

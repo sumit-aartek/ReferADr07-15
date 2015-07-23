@@ -12,7 +12,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-
+<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" />
 <script type="text/javascript" src="js7_15/jsp-js/referPatientMain.js"></script>
 
 <link rel="stylesheet" href="jQuery/css/validationEngine.jquery.css" type="text/css" />
@@ -837,7 +837,7 @@ var key;
 						</h3>
 					</div>
 
-					<div class="small-12 medium-8 large-8 columns  select-radio-option">
+					<div style="display: none;" class="small-12 medium-8 large-8 columns  select-radio-option">
 						<p>
 							<!-- <input name="Yes" type="radio" value="Yes" id="specialist-radio"
 								checked="checked"> -->
@@ -889,9 +889,67 @@ var key;
 					</div>
 
 					<div class="small-12 medium-6 large-6 columns">
-						<a href="#" onclick="callSchedule()" id="callScheduleid" class="button">Schedule</a>
+	
+							<input type="button" onclick="callSchedule()" class="button" id="callScheduleid" value="Schedule" disabled="disabled">
 					</div>
-
+				<div class="modal fade" id="shaduleModal" tabindex="-1"
+					role="dialog" aria-labelledby="exampleModalLabel"
+					aria-hidden="true" style="display: none;">
+					<div class="modal-dialog">
+						<div class="modal-content large-12 columns">
+							<div class="modal-header">
+								<button onclick="closeschedulediv()" type="button" class="close"
+									data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true"><img class="close"
+										src="bootstrap/alert_boxes_close_ico.png"></span>
+								</button>
+								<h4 class="modal-title" id="exampleModalLabel">Schedule</h4>
+							</div>
+							<div id="mailsent" class="modal-body">
+								<form>
+									<div class="form-group">
+										<input type="checkbox" disabled="true" id="day7" /> <label
+											for="day7" class="control-label">Sun</label> <input
+											type="checkbox" disabled="true" id="day1" /> <label
+											for="day1" class="control-label">Mon</label> <input
+											type="checkbox" disabled="true" id="day2" /> <label
+											for="day2" class="control-label">Tue</label> <input
+											type="checkbox" disabled="true" id="day3" /> <label
+											for="day3" class="control-label">Wed</label> <input
+											type="checkbox" disabled="true" id="day4" /> <label
+											for="day4" class="control-label">Thu</label> <input
+											type="checkbox" disabled="true" id="day5" /> <label
+											for="day5" class="control-label">Fri</label> <input
+											type="checkbox" disabled="true" id="day6" /> <label
+											for="day6" class="control-label">Sat</label>
+									</div>
+									<div class="form-group">
+										<label for="datetimepicker" class="control-label">Select
+											Date</label> <input type="text" class="form-control"
+											onchange="dateselected()" id="datetimepicker" /><br>
+									</div>
+									<div class="form-group">
+										<label for="datetimepicker2" class="control-label">Select
+											Time</label> <select class="form-control" id="timeselect">
+											<option>__:__</option>
+										</select>
+										<!-- <input type="text" class="form-control" id="datetimepicker2"/><br> -->
+									</div>
+									<div class="form-group">
+										<label for="message-text" class="control-label">Notes</label>
+										<textarea class="form-control" id="sheduleNotes"></textarea>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary"
+											onclick="return saveShedule()" id="sheduleButton">Continue</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.modal -->
+				<!-- 	<h1>schedule</h1> -->
 					<div class="clearfix"></div>
 
 
@@ -986,5 +1044,70 @@ var key;
             datepickr('#someFrench.sil-vous-plait', { dateFormat: '\\le j F Y' });
         </script>
 <!--Ony For DatePicker Ends Here-->
+
 </body>
+<script src="js/page-js/jquery.datetimepicker.js"></script>
+<script>
+
+ function Disableday(date) {
+	 
+	  var day = date.getDay();
+	 // If day == 1 then it is MOnday
+	 if (day == 1) {
+		var mon= document.getElementById('day1').checked;
+		if(!mon){
+	 return [false] ; 
+		}	 
+	 }
+	 else if (day == 2) {
+			var mon= document.getElementById('day2').checked;
+			if(!mon){
+		 return [false] ; 
+			}	 
+		 }
+	 else if (day == 3) {
+			var mon= document.getElementById('day3').checked;
+			if(!mon){
+		 return [false] ; 
+			}	 
+		 }
+	 else if (day == 4) {
+			var mon= document.getElementById('day4').checked;
+			if(!mon){
+		 return [false] ; 
+			}	 
+		 }
+	 else if (day == 5) {
+			var mon= document.getElementById('day5').checked;
+			if(!mon){
+		 return [false] ; 
+			}	 
+		 }
+	 else if (day == 6) {
+			var mon= document.getElementById('day6').checked;
+			if(!mon){
+		 return [false] ; 
+			}	 
+		 }
+	 else if (day == 0) {
+			var mon= document.getElementById('day7').checked;
+			if(!mon){
+		 return [false] ; 
+			}	 
+		 }
+	  else { 
+	 
+	 return [true] ;
+	 }
+	}
+
+
+	
+ jQuery('#datetimepicker').datetimepicker({
+	 timepicker:false,
+	 format:'Y-m-d',
+	beforeShowDay: Disableday
+	
+	});
+</script>
 </html>
