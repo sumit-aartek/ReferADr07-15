@@ -829,7 +829,7 @@ List<PateintAndInsuranceInfoVO> pateintAndInsuranceInfoVOs=new ArrayList<Pateint
 			String toMail=providerInfo.getProviderEmail();
 			
 	//	String fromEmail="patidarsandeep991@gmail.com";
-		String subject="Refrall Update";
+		String subject="Referral Update";
 		 String body="Dear Dr. "+providerInfo.getProviderLastName()+"\n\n Your patient "+patientName+". has been scheduled to see "+referedandPracticeInfo.getProviderLastName()+" on "+schrduledate+" "+schrduletime+". We will keep you posted about the prognosis.\n \n Best \n "+referedandPracticeInfo.getPracticeInfo().getPracticeName()+" ";
 		
 		 try{
@@ -1240,7 +1240,7 @@ if(!list.isEmpty()){
 			String toMail = providerInfo.getProviderEmail();
 
 			// String fromEmail="patidarsandeep991@gmail.com";
-			String subject = "Refrall Update";
+			String subject = "Referral Update";
 
 			String body = "Dear Dr. "
 					+ providerInfo.getProviderLastName()
