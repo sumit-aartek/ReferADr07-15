@@ -34,7 +34,7 @@
 
 										<div class="small-12 medium-12 large-4 columns">
                                             <img class="select-dp" src="img7_15/gravatar.jpg">
-											<input type="file" name="fileToUpload" id="fileToUpload" multiple="">
+											<input type="file" name="fileToUpload" id="fileToUpload" multiple>
 										</div>
                                         
                                         <div class="clearfix"></div>

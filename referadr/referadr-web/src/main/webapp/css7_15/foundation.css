@@ -1170,6 +1170,8 @@ button, .button {
   transition: background-color 300ms ease-out;
   text-transform: uppercase;
 }
+input[type=submit].button { border-radius: 7px; }
+  
   button:hover, button:focus, .button:hover, .button:focus {
     background-color: #000; }
   button:hover, button:focus, .button:hover, .button:focus {

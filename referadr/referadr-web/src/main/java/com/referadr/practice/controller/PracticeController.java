@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.referadr.Exception.ReferadrException;
@@ -163,7 +164,7 @@ public class PracticeController {
 		return "PracticeInfo7_15";
 	}
 	@RequestMapping(value = "/updatePracticeInfo", method = RequestMethod.POST) 
-	public String updatePracticeInfo(@ModelAttribute("practiceInfo")PracticeInfo practiceInfo,HttpServletRequest request,Model model)
+	public String updatePracticeInfo(@ModelAttribute("practiceInfo")PracticeInfo practiceInfo,HttpServletRequest request,Model model,@RequestParam("fileToUpload") MultipartFile[] fileToUpload)
 	{
 		HttpSession session=request.getSession();
 		Login login=(Login)session.getAttribute("login");

@@ -25,8 +25,28 @@ public class ReportRepositoryImpl implements ReportRepository {
 		// main logic
 
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		DateFormat dateFormat1 = new SimpleDateFormat("MMMM d, yyyy");
 		String start = repVO.getStartDate();
 		String end = repVO.getEndDate();
+	
+		if(!start.equals("")){
+	       Date tempDate=null;
+	 	  Date tempDateEnd=null;
+		try {
+			tempDate = dateFormat1.parse(start);
+			
+			if(!end.equals("")){
+				tempDateEnd=dateFormat1.parse(end);
+				end=dateFormat.format(tempDateEnd);
+			
+			}
+			 start=dateFormat.format(tempDate);
+		} catch (ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		}
+		
 		final boolean flag=repVO.isFlag();
 		// if both are not selected
 		if (start.equals("") && end.equals("")) {

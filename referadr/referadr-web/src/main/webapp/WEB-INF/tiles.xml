@@ -269,6 +269,13 @@
 		<put-attribute name="menu" value="/WEB-INF/jsp/menu_ch.jsp"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/jsp/print.jsp"></put-attribute>
 	</definition>
+	
+		<definition name="print7_15" id="print7_15" extends="base7_15.definition">
+		<put-attribute name="title" value="Print"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp7_15/leftMenu.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp7_15/print.jsp"></put-attribute>
+	</definition>
+	
 
 	<definition name="doctor" id="doctor" extends="base.definition">
 		<put-attribute name="title" value="doctor"></put-attribute>
@@ -330,6 +337,12 @@
 		<put-attribute name="body" value="/WEB-INF/jsp/reportNew.jsp"></put-attribute>
 	</definition>
 
+	<definition name="report7_15" id="report7_15" extends="base7_15.definition">
+		<put-attribute name="title" value="Report"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp7_15/leftMenu.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp7_15/report.jsp"></put-attribute>
+	</definition>
+	
 
 	<definition name="practiceInsurance" id="practiceInsurance"
 		extends="base.definition">
@@ -440,11 +453,24 @@
 		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/jsp/refralReasonsNew.jsp"></put-attribute>
 	</definition>
+	
+	
+	<definition name="refralReasons7_15" id="refralReasons7_15" extends="base7_15.definition">
+		<put-attribute name="title" value="Refral reasons"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp7_15/leftMenu.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp7_15/refralReasons.jsp"></put-attribute>
+	</definition>
 
 	<definition name="updateNew" id="updateNew" extends="baseNew.definition">
 		<put-attribute name="title" value="update refral"></put-attribute>
 		<put-attribute name="menu" value="/WEB-INF/jsp/menu_chNew.jsp"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/jsp/updateNew.jsp"></put-attribute>
+	</definition>
+
+	<definition name="update7_15" id="update7_15" extends="base7_15.definition">
+		<put-attribute name="title" value="update refral"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp7_15/leftMenu.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp7_15/update.jsp"></put-attribute>
 	</definition>
 
 

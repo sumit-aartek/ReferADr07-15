@@ -168,7 +168,7 @@ function dateselected(){
 	
 	var Date=document.getElementById("datetimepicker").value;
 	var provID=document.getElementById("providerInfoId").value;
-	//alert('hi='+Date);
+	alert('hi='+Date);
 	   $.ajax({
 	        url : "getProviderTimeSlots.do?practiceInfoId="+provID+"&scheduleDate="+Date,
 	        type : "GET",

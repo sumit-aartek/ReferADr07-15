@@ -341,7 +341,8 @@ public class InboxController {
 				return "redirect:/logout.do";
 			}
 			/* return "refralReasons"; */
-			return "refralReasonsNew";
+			/*return "refralReasonsNew";*/
+			return "refralReasons7_15";
 		} 
 		catch (Exception e) 
 		{
@@ -430,7 +431,8 @@ public class InboxController {
 				return "redirect:/logout.do";
 			}
 			/* return "update"; */
-			return "updateNew";
+			/*return "updateNew";*/
+			return "update7_15";
 		}
 		catch (Exception e) 
 		{
@@ -462,6 +464,7 @@ public class InboxController {
 				return "redirect:/logout.do";
 			}
 			return "print";
+			/*return "print7_15";*/
 		}
 		catch (Exception e) 
 		{
@@ -832,7 +835,8 @@ public class InboxController {
 				return "redirect:/logout.do";
 			}
 			/* return "report"; */
-			return "reportNew";
+			/*return "reportNew";*/
+			return "report7_15";
 		}
 		catch (Exception e) 
 		{
